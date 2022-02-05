@@ -1,5 +1,6 @@
 package model.creatures;
 
+import model.exceptions.ItemNotInInventoryException;
 import model.items.Equipment;
 import model.items.Item;
 import model.items.equipable.Equipable;
@@ -22,7 +23,7 @@ public class Adventurer extends Creature{
 
     public void equipItem(Equipable item) {
         if (!inventory.contains((Item)item)) {
-            throw new IllegalArgumentException("you don't have this item in your inventory");
+            throw new ItemNotInInventoryException("you don't have this item in your inventory");
         }
         inventory.remove((Item)item);
         Equipable previousItem = item.equip(this);
