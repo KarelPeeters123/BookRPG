@@ -7,8 +7,8 @@ import java.util.Map;
 public class Helmet extends WornItem implements Equipable{
 
 
-    public Helmet(String name, String description, int buyPrice, int sellPrice, Map<String, Integer> statbonus) {
-        super(name, description, buyPrice, sellPrice, statbonus);
+    public Helmet(String name, String description, int intelligence, int accuracy, int defense, int cooperation) {
+        super(name, description, intelligence, accuracy, defense, cooperation);
     }
 
     @Override

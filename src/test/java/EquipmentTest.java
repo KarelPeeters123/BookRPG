@@ -14,9 +14,9 @@ public class EquipmentTest {
         Adventurer adventurer = new Adventurer("Kalenz");
         assertNull(adventurer.getEquipment().getHelmet());
         assertEquals(0, adventurer.getInventory().size());
-        Equipable helmet1 = new Helmet("crusader helmet", "a steel helmet worn by crusaders", 500, 200, null);
-        Equipable helmet2 = new Helmet("conquistador helmet", "a steel helmet worn by spanish conquistadors", 500, 200, null);
-        Equipable gloves = new Gloves("steel gloves", "steel gloves to prevent losing your fingers in combat", 500, 200, null);
+        Equipable helmet1 = new Helmet("crusader helmet", "a steel helmet worn by crusaders", 0, 0, 0, 0);
+        Equipable helmet2 = new Helmet("conquistador helmet", "a steel helmet worn by spanish conquistadors", 0, 0, 0, 0);
+        Equipable gloves = new Gloves("steel gloves", "steel gloves to prevent losing your fingers in combat", 0, 0, 0, 0);
         assertThrows(IllegalArgumentException.class,
                 () -> {
                     adventurer.equipItem(helmet1);

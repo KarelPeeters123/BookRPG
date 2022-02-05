@@ -5,8 +5,8 @@ import model.creatures.Adventurer;
 import java.util.Map;
 
 public class Gloves extends WornItem implements Equipable{
-    public Gloves(String name, String description, int buyPrice, int sellPrice, Map<String, Integer> statbonus) {
-        super(name, description, buyPrice, sellPrice, statbonus);
+    public Gloves(String name, String description, int intelligence, int accuracy, int defense, int cooperation) {
+        super(name, description, intelligence, accuracy, defense, cooperation);
     }
 
     @Override

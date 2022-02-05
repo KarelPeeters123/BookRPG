@@ -3,17 +3,19 @@ package model.creatures;
 import model.items.Equipment;
 import model.items.Item;
 import model.items.equipable.Equipable;
+import model.stats.CreatureStatBlock;
 import model.stats.StatBlock;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Adventurer extends Creature{
+    private Party party;
     private List<Item> inventory;
     private Equipment equipment;
 
     public Adventurer(String name) {
-        super(name, new StatBlock(CreatureType.ADVENTURER));
+        super(name, new CreatureStatBlock(CreatureType.ADVENTURER));
         this.inventory = new ArrayList<>();
         this.equipment = new Equipment();
     }
@@ -39,7 +41,18 @@ public class Adventurer extends Creature{
     public void removeFromInventory(Item item) {
         inventory.remove(item);
     }
-
+    public void joinParty(Party newParty) {
+        if (this.party != null) {
+            this.party.removeAdventurer(this);
+        }
+        this.party = newParty;
+    }
+    public void leaveParty() {
+        this.party = null;
+    }
+    public boolean hasParty() {
+        return party != null;
+    }
     public Equipment getEquipment() {
         return equipment;
     }
@@ -47,4 +60,6 @@ public class Adventurer extends Creature{
     public List<Item> getInventory() {
         return inventory;
     }
+
+
 }

@@ -1,5 +1,6 @@
 package model.creatures;
 
+import model.stats.CreatureStatBlock;
 import model.stats.StatBlock;
 import model.strategy.AccuracyStrategy;
 import model.strategy.CompareStatsAccuracyStrategy;
@@ -8,10 +9,10 @@ import model.strategy.ExponentDamageStrategy;
 
 public class Creature {
     protected String name;
-    protected StatBlock stats;
+    protected CreatureStatBlock stats;
     protected boolean isAlive;
 
-    public Creature(String name, StatBlock stats) {
+    public Creature(String name, CreatureStatBlock stats) {
         this.name = name;
         this.stats = stats;
         this.isAlive = true;

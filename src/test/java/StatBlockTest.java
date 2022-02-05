@@ -1,4 +1,5 @@
 import model.creatures.CreatureType;
+import model.stats.CreatureStatBlock;
 import model.stats.StatBlock;
 import org.junit.jupiter.api.Test;
 
@@ -7,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class StatBlockTest {
     @Test
     public void testBaseAdventurerStats() {
-        StatBlock adventurerStats = new StatBlock(CreatureType.ADVENTURER);
+        CreatureStatBlock adventurerStats = new CreatureStatBlock(CreatureType.ADVENTURER);
         assertEquals(10, adventurerStats.getHealth().getCurrent());
         assertEquals(10, adventurerStats.getHealth().getMaximum());
         assertEquals(10, adventurerStats.getMana().getCurrent());
@@ -19,7 +20,7 @@ public class StatBlockTest {
     }
     @Test
     public void damageTest() {
-        StatBlock adventurerStats = new StatBlock(CreatureType.ADVENTURER);
+        CreatureStatBlock adventurerStats = new CreatureStatBlock(CreatureType.ADVENTURER);
         assertEquals(10, adventurerStats.getHealth().getCurrent());
         adventurerStats.takeDamage(5);
         assertEquals(5, adventurerStats.getHealth().getCurrent());
@@ -28,7 +29,7 @@ public class StatBlockTest {
     }
     @Test
     public void healTest() {
-        StatBlock adventurerStats = new StatBlock(CreatureType.ADVENTURER);
+        CreatureStatBlock adventurerStats = new CreatureStatBlock(CreatureType.ADVENTURER);
         assertEquals(10, adventurerStats.getHealth().getCurrent());
         adventurerStats.takeDamage(5);
         assertEquals(5, adventurerStats.getHealth().getCurrent());
@@ -39,7 +40,7 @@ public class StatBlockTest {
     }
     @Test
     public void useManaTest() {
-        StatBlock adventurerStats = new StatBlock(CreatureType.ADVENTURER);
+        CreatureStatBlock adventurerStats = new CreatureStatBlock(CreatureType.ADVENTURER);
         assertEquals(10, adventurerStats.getMana().getCurrent());
         adventurerStats.useMana(5);
         assertEquals(5, adventurerStats.getMana().getCurrent());
@@ -48,7 +49,7 @@ public class StatBlockTest {
     }
     @Test
     public void replenishManaTest() {
-        StatBlock adventurerStats = new StatBlock(CreatureType.ADVENTURER);
+        CreatureStatBlock adventurerStats = new CreatureStatBlock(CreatureType.ADVENTURER);
         assertEquals(10, adventurerStats.getMana().getCurrent());
         adventurerStats.useMana(5);
         assertEquals(5, adventurerStats.getMana().getCurrent());

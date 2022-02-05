@@ -5,8 +5,8 @@ import model.creatures.Adventurer;
 import java.util.Map;
 
 public class Shield extends WornItem implements Equipable{
-    public Shield(String name, String description, int buyPrice, int sellPrice, Map<String, Integer> statbonus) {
-        super(name, description, buyPrice, sellPrice, statbonus);
+    public Shield(String name, String description, int intelligence, int accuracy, int defense, int cooperation) {
+        super(name, description, intelligence, accuracy, defense, cooperation);
     }
 
     @Override
