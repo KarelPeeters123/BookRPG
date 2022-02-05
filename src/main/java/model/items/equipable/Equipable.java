@@ -1,6 +1,6 @@
 package model.items.equipable;
 
-import model.Adventurer;
+import model.creatures.Adventurer;
 
 public interface Equipable {
     Equipable equip(Adventurer self);

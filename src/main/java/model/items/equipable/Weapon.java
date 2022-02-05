@@ -1,6 +1,6 @@
 package model.items.equipable;
 
-import model.Adventurer;
+import model.creatures.Adventurer;
 
 import java.util.Map;
 

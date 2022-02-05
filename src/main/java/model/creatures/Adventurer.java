@@ -1,30 +1,23 @@
-package model;
+package model.creatures;
 
+import model.items.Equipment;
 import model.items.Item;
 import model.items.equipable.Equipable;
-import model.items.equipable.Helmet;
-import model.items.equipable.WornItem;
+import model.stats.StatBlock;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Adventurer extends Creature{
-    private AdventurerClass adventurerClass;
     private List<Item> inventory;
     private Equipment equipment;
 
-    public Adventurer(String name, AdventurerClass adventurerClass) {
-        super(name, new StatBlock(Entity.ADVENTURER));
-        this.adventurerClass = adventurerClass;
+    public Adventurer(String name) {
+        super(name, new StatBlock(CreatureType.ADVENTURER));
         this.inventory = new ArrayList<>();
         this.equipment = new Equipment();
     }
-    public void heal(int health) {
-        stats.heal(health);
-    }
-    public void replenishMana(int mana) {
-        stats.replenishMana(mana);
-    }
+
     public void equipItem(Equipable item) {
         if (!inventory.contains((Item)item)) {
             throw new IllegalArgumentException("you don't have this item in your inventory");

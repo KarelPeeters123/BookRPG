@@ -1,8 +1,7 @@
 package model.items.consumable;
 
-import model.Adventurer;
+import model.creatures.Adventurer;
 import model.items.Item;
-import model.items.consumable.Consumable;
 
 public class ManaPotion extends Item implements Consumable {
     int mana;

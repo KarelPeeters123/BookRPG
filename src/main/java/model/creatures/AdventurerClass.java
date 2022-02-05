@@ -1,4 +1,4 @@
-package model;
+package model.creatures;
 
 public enum AdventurerClass {
     MAGE,

@@ -1,7 +1,7 @@
 package model.strategy;
 
-import model.Creature;
+import model.creatures.Creature;
 
 public interface AccuracyStrategy {
-    boolean isHit(Creature creature);
+    boolean isHit(Creature attacker, Creature defender);
 }

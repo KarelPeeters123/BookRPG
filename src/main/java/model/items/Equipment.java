@@ -1,5 +1,6 @@
-package model;
+package model.items;
 
+import model.creatures.Adventurer;
 import model.items.equipable.*;
 
 public class Equipment {

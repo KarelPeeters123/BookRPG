@@ -1,9 +1,8 @@
-import model.*;
+import model.creatures.Adventurer;
 import model.items.Item;
 import model.items.equipable.Equipable;
 import model.items.equipable.Gloves;
 import model.items.equipable.Helmet;
-import model.items.equipable.WornItem;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,7 +11,7 @@ public class EquipmentTest {
 
     @Test
     public void equipTest() {
-        Adventurer adventurer = new Adventurer("Kalenz", AdventurerClass.FIGHTER);
+        Adventurer adventurer = new Adventurer("Kalenz");
         assertNull(adventurer.getEquipment().getHelmet());
         assertEquals(0, adventurer.getInventory().size());
         Equipable helmet1 = new Helmet("crusader helmet", "a steel helmet worn by crusaders", 500, 200, null);

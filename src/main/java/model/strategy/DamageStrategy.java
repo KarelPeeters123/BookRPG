@@ -1,6 +1,6 @@
 package model.strategy;
 
-import model.Creature;
+import model.creatures.Creature;
 
 public interface DamageStrategy {
     int calculateDamage(Creature attacker);

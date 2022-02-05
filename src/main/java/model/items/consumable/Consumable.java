@@ -1,6 +1,6 @@
 package model.items.consumable;
 
-import model.Adventurer;
+import model.creatures.Adventurer;
 
 public interface Consumable {
     void consume(Adventurer self);

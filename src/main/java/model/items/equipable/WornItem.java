@@ -1,8 +1,6 @@
 package model.items.equipable;
 
-import model.Adventurer;
 import model.items.Item;
-import model.items.equipable.EquipmentType;
 
 import java.util.HashMap;
 import java.util.Map;
