@@ -3,6 +3,8 @@ package model.items;
 import model.creatures.Adventurer;
 import model.items.equipable.*;
 
+import java.util.Optional;
+
 public class Equipment {
     private Adventurer self;
     private Helmet helmet;
@@ -18,52 +20,52 @@ public class Equipment {
 
 
     public int getTotalIntelligenceBonus() {
-        return this.helmet.getIntelligence()
-                + this.body.getIntelligence()
-                + this.legs.getIntelligence()
-                + this.boots.getIntelligence()
-                + this.weapon.getIntelligence()
-                + this.shield.getIntelligence()
-                + this.gloves.getIntelligence()
-                + this.necklace.getIntelligence()
-                + this.ring.getIntelligence()
-                + this.pouch.getIntelligence();
+        return (this.helmet != null ? this.helmet.getIntelligence(): 0)
+                + (this.body != null ? this.body.getIntelligence(): 0)
+                + (this.legs != null ? this.legs.getIntelligence(): 0)
+                + (this.boots != null ? this.boots.getIntelligence(): 0)
+                + (this.weapon != null ? this.weapon.getIntelligence(): 0)
+                + (this.shield != null ? this.shield.getIntelligence(): 0)
+                + (this.gloves != null ? this.gloves.getIntelligence(): 0)
+                + (this.necklace != null ? this.necklace.getIntelligence(): 0)
+                + (this.ring != null ? this.ring.getIntelligence(): 0)
+                + (this.pouch != null ? this.pouch.getIntelligence(): 0);
     }
-    public int getTotalAccuracy() {
-        return this.helmet.getAccuracy()
-                + this.body.getAccuracy()
-                + this.legs.getAccuracy()
-                + this.boots.getAccuracy()
-                + this.weapon.getAccuracy()
-                + this.shield.getAccuracy()
-                + this.gloves.getAccuracy()
-                + this.necklace.getAccuracy()
-                + this.ring.getAccuracy()
-                + this.pouch.getAccuracy();
+    public int getTotalAccuracyBonus() {
+        return (this.helmet != null ? this.helmet.getAccuracy(): 0)
+                + (this.body != null ? this.body.getAccuracy(): 0)
+                + (this.legs != null ? this.legs.getAccuracy(): 0)
+                + (this.boots != null ? this.boots.getAccuracy(): 0)
+                + (this.weapon != null ? this.weapon.getAccuracy(): 0)
+                + (this.shield != null ? this.shield.getAccuracy(): 0)
+                + (this.gloves != null ? this.gloves.getAccuracy(): 0)
+                + (this.necklace != null ? this.necklace.getAccuracy(): 0)
+                + (this.ring != null ? this.ring.getAccuracy(): 0)
+                + (this.pouch != null ? this.pouch.getAccuracy(): 0);
     }
     public int getTotalDefenseBonus() {
-        return this.helmet.getDefense()
-                + this.body.getDefense()
-                + this.legs.getDefense()
-                + this.boots.getDefense()
-                + this.weapon.getDefense()
-                + this.shield.getDefense()
-                + this.gloves.getDefense()
-                + this.necklace.getDefense()
-                + this.ring.getDefense()
-                + this.pouch.getDefense();
+        return (this.helmet != null ? this.helmet.getDefense(): 0)
+                + (this.body != null ? this.body.getDefense(): 0)
+                + (this.legs != null ? this.legs.getDefense(): 0)
+                + (this.boots != null ? this.boots.getDefense(): 0)
+                + (this.weapon != null ? this.weapon.getDefense(): 0)
+                + (this.shield != null ? this.shield.getDefense(): 0)
+                + (this.gloves != null ? this.gloves.getDefense(): 0)
+                + (this.necklace != null ? this.necklace.getDefense(): 0)
+                + (this.ring != null ? this.ring.getDefense(): 0)
+                + (this.pouch != null ? this.pouch.getDefense(): 0);
     }
     public int getTotalCooperationBonus() {
-        return this.helmet.getCooperation()
-                + this.body.getCooperation()
-                + this.legs.getCooperation()
-                + this.boots.getCooperation()
-                + this.weapon.getCooperation()
-                + this.shield.getCooperation()
-                + this.gloves.getCooperation()
-                + this.necklace.getCooperation()
-                + this.ring.getCooperation()
-                + this.pouch.getCooperation();
+        return (this.helmet != null ? this.helmet.getCooperation(): 0)
+                + (this.body != null ? this.body.getCooperation(): 0)
+                + (this.legs != null ? this.legs.getCooperation(): 0)
+                + (this.boots != null ? this.boots.getCooperation(): 0)
+                + (this.weapon != null ? this.weapon.getCooperation(): 0)
+                + (this.shield != null ? this.shield.getCooperation(): 0)
+                + (this.gloves != null ? this.gloves.getCooperation(): 0)
+                + (this.necklace != null ? this.necklace.getCooperation(): 0)
+                + (this.ring != null ? this.ring.getCooperation(): 0)
+                + (this.pouch != null ? this.pouch.getCooperation(): 0);
     }
 
     /**

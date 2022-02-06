@@ -63,10 +63,5 @@ public class PartyTest {
         party.addAdventurer(kalenz);
         assertEquals(1, party.getPartySize());
     }
-    @Test
-    public void getCooperationFromPartyTest() {
-        party.addAdventurer(kalenz);
-        party.addAdventurer(landar);
-        assertEquals(1, party.getCooperationBonus(kalenz));
-    }
+
 }

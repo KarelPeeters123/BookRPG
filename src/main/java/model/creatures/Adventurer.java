@@ -58,8 +58,19 @@ public class Adventurer extends Creature{
 
     @Override
     public int getIntelligence() {
-        //TODO
-        return super.getIntelligence() + equipment.getTotalIntelligenceBonus();
+        return super.getIntelligence() + equipment.getTotalIntelligenceBonus() + party.getCooperationBonus(this);
+    }
+    @Override
+    public int getAccuracy() {
+        return super.getAccuracy() + equipment.getTotalAccuracyBonus() + party.getCooperationBonus(this);
+    }
+    @Override
+    public int getDefense() {
+        return super.getDefense() + equipment.getTotalDefenseBonus() + party.getCooperationBonus(this);
+    }
+    @Override
+    public int getCooperation() {
+        return super.getCooperation() + equipment.getTotalCooperationBonus();
     }
 
     public Equipment getEquipment() {

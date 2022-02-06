@@ -6,12 +6,12 @@ import model.stats.StatBlock;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class WornItem extends Item {
+public abstract class WornItem extends Item implements Equipable{
     private StatBlock stats;
 
     public WornItem(String name, String description, int intelligence, int accuracy, int defense, int cooperation) {
         super(name, description);
-        stats = new StatBlock();
+        stats = new StatBlock(intelligence, accuracy, defense, cooperation);
     }
     public int getIntelligence() {
         return stats.getIntelligence().getCurrent();
