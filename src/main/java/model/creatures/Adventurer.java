@@ -42,6 +42,7 @@ public class Adventurer extends Creature{
     public void removeFromInventory(Item item) {
         inventory.remove(item);
     }
+
     public void joinParty(Party newParty) {
         if (this.party != null) {
             this.party.removeAdventurer(this);
@@ -54,6 +55,13 @@ public class Adventurer extends Creature{
     public boolean hasParty() {
         return party != null;
     }
+
+    @Override
+    public int getIntelligence() {
+        //TODO
+        return super.getIntelligence() + equipment.getTotalIntelligenceBonus();
+    }
+
     public Equipment getEquipment() {
         return equipment;
     }

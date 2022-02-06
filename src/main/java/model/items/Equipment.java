@@ -17,6 +17,54 @@ public class Equipment {
     private Pouch pouch;
 
 
+    public int getTotalIntelligenceBonus() {
+        return this.helmet.getIntelligence()
+                + this.body.getIntelligence()
+                + this.legs.getIntelligence()
+                + this.boots.getIntelligence()
+                + this.weapon.getIntelligence()
+                + this.shield.getIntelligence()
+                + this.gloves.getIntelligence()
+                + this.necklace.getIntelligence()
+                + this.ring.getIntelligence()
+                + this.pouch.getIntelligence();
+    }
+    public int getTotalAccuracy() {
+        return this.helmet.getAccuracy()
+                + this.body.getAccuracy()
+                + this.legs.getAccuracy()
+                + this.boots.getAccuracy()
+                + this.weapon.getAccuracy()
+                + this.shield.getAccuracy()
+                + this.gloves.getAccuracy()
+                + this.necklace.getAccuracy()
+                + this.ring.getAccuracy()
+                + this.pouch.getAccuracy();
+    }
+    public int getTotalDefenseBonus() {
+        return this.helmet.getDefense()
+                + this.body.getDefense()
+                + this.legs.getDefense()
+                + this.boots.getDefense()
+                + this.weapon.getDefense()
+                + this.shield.getDefense()
+                + this.gloves.getDefense()
+                + this.necklace.getDefense()
+                + this.ring.getDefense()
+                + this.pouch.getDefense();
+    }
+    public int getTotalCooperationBonus() {
+        return this.helmet.getCooperation()
+                + this.body.getCooperation()
+                + this.legs.getCooperation()
+                + this.boots.getCooperation()
+                + this.weapon.getCooperation()
+                + this.shield.getCooperation()
+                + this.gloves.getCooperation()
+                + this.necklace.getCooperation()
+                + this.ring.getCooperation()
+                + this.pouch.getCooperation();
+    }
 
     /**
      *

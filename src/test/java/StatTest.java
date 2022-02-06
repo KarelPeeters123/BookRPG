@@ -61,4 +61,5 @@ public class StatTest {
         assertEquals(0, myStat.getCurrent());
     }
 
+
 }

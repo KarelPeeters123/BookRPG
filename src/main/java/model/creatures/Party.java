@@ -23,6 +23,15 @@ public class Party {
         adventurer.leaveParty();
     }
 
+    public int getCooperationBonus(Adventurer adventurer) {
+        int cooperation = 0;
+        for (Adventurer member: members) {
+            if (!member.equals(adventurer)) {
+                cooperation += member.getCooperation();
+            }
+        }
+        return cooperation;
+    }
     public List<Adventurer> getMembers() {
         return members;
     }

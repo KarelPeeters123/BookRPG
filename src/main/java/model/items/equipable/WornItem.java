@@ -13,4 +13,16 @@ public abstract class WornItem extends Item {
         super(name, description);
         stats = new StatBlock();
     }
+    public int getIntelligence() {
+        return stats.getIntelligence().getCurrent();
+    }
+    public int getAccuracy() {
+        return stats.getAccuracy().getCurrent();
+    }
+    public int getDefense() {
+        return stats.getDefense().getCurrent();
+    }
+    public int getCooperation() {
+        return stats.getCooperation().getCurrent();
+    }
 }

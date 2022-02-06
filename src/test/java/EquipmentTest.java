@@ -1,4 +1,5 @@
 import model.creatures.Adventurer;
+import model.exceptions.ItemNotInInventoryException;
 import model.items.Item;
 import model.items.equipable.Equipable;
 import model.items.equipable.Gloves;
@@ -17,7 +18,7 @@ public class EquipmentTest {
         Equipable helmet1 = new Helmet("crusader helmet", "a steel helmet worn by crusaders", 0, 0, 0, 0);
         Equipable helmet2 = new Helmet("conquistador helmet", "a steel helmet worn by spanish conquistadors", 0, 0, 0, 0);
         Equipable gloves = new Gloves("steel gloves", "steel gloves to prevent losing your fingers in combat", 0, 0, 0, 0);
-        assertThrows(IllegalArgumentException.class,
+        assertThrows(ItemNotInInventoryException.class,
                 () -> {
                     adventurer.equipItem(helmet1);
                 }

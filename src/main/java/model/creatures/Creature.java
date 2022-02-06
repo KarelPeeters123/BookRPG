@@ -39,7 +39,18 @@ public class Creature {
         stats.useMana(mana);
     }
 
-
+    public int getIntelligence() {
+        return this.stats.getIntelligence().getCurrent();
+    }
+    public int getAccuracy() {
+        return this.stats.getAccuracy().getCurrent();
+    }
+    public int getDefense() {
+        return this.stats.getDefense().getCurrent();
+    }
+    public int getCooperation() {
+        return this.stats.getCooperation().getCurrent();
+    }
 
     public String getName() {
         return name;
@@ -48,6 +59,8 @@ public class Creature {
     public StatBlock getStats() {
         return stats;
     }
+
+
 
     public boolean isAlive() {
         return isAlive;
