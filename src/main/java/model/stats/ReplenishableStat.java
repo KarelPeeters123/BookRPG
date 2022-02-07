@@ -12,12 +12,14 @@ public class ReplenishableStat extends Stat{
         }
         this.maximum = maximum;
     }
+    @Override
     public void increaseBy(int increment) {
         current = current + increment;
         if (current > maximum) {
             current = maximum;
         }
     }
+    @Override
     public void decreaseBy(int decrement) {
         current = current - decrement;
         if (current < 0) {

@@ -39,6 +39,11 @@ public class Adventurer extends Creature{
     public void addToInventory(Item item) {
         inventory.add(item);
     }
+    public void addToInventory(List<Item> items) {
+        for (Item item: items) {
+            addToInventory(item);
+        }
+    }
     public void removeFromInventory(Item item) {
         inventory.remove(item);
     }

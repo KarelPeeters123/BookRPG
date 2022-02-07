@@ -52,6 +52,31 @@ public class Creature {
         return this.stats.getCooperation().getCurrent();
     }
 
+    public void increaseIntelligence(int increment) {
+        this.stats.getIntelligence().increaseBy(increment);
+    }
+    public void decreaseIntelligence(int decrement) {
+        this.stats.getIntelligence().decreaseBy(decrement);
+    }
+    public void increaseAccuracy(int increment) {
+        this.stats.getAccuracy().increaseBy(increment);
+    }
+    public void decreaseAccuracy(int decrement) {
+        this.stats.getAccuracy().decreaseBy(decrement);
+    }
+    public void increaseDefense(int increment) {
+        this.stats.getDefense().increaseBy(increment);
+    }
+    public void decreaseDefense(int decrement) {
+        this.stats.getDefense().decreaseBy(decrement);
+    }
+    public void increaseCooperation(int increment) {
+        this.stats.getCooperation().increaseBy(increment);
+    }
+    public void decreaseCooperation(int decrement) {
+        this.stats.getIntelligence().decreaseBy(decrement);
+    }
+
     public String getName() {
         return name;
     }

@@ -8,7 +8,15 @@ public class Stat {
         }
         this.current = current;
     }
-
+    public void increaseBy(int increment) {
+        current = current + increment;
+    }
+    public void decreaseBy(int decrement) {
+        current = current - decrement;
+        if (current < 0) {
+            current = 0;
+        }
+    }
 
     public int getCurrent() {
         return current;
